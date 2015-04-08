@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tena Percy -- Project</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a mock pet-adoption site!">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/foundation/normalize.css">
+    <link rel="stylesheet" href="stylesheets/foundation/foundation.css">
+    <script src="javascripts/vendor/jquery.js"></script>
+    <script src="javascripts/vendor/modernizr.js"></script>
+    <link href="stylesheets/sign_up.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="center row">
+    <ul class="tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1">Sign Up</a></li>
+      <li class="tab-title"><a href="#panel2">Sign In</a></li>
+    </ul>
+    <div class="tabs-content">
+    <div class="content active" data-section-content id="panel1">
+      <p>
+       <div class="row">
+        <div class="large-12 columns">
+          <div class="signup-panel">
+            <p class="welcome">Hello, new user!</p>
+            <form>
+              <div class="row collapse">
+                <div class="small-2  columns">
+                  <span class="prefix"><i class="fi-torso"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" placeholder="Full Name">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns">
+                  <span class="prefix"><i class="fi-mail"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" placeholder="Email">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns ">
+                  <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                  <input type="text" placeholder="Password">
+                </div>
+              </div>
+            </form>
+            <a href="#" class="button ">Sign Up! </a>
+          </div>
+        </div>
+        </div></p>
+    </div>
+    <div class="content" data-section-content id="panel2">
+      <p>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="signup-panel">
+            <p class="welcome">Welcome back!</p>
+            <form>
+              <div class="row collapse">
+                <div class="small-2 columns">
+                  <span class="prefix"><i class="fi-mail"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" placeholder="Email">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns ">
+                  <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                  <input type="text" placeholder="Password">
+                </div>
+              </div>
+            </form>
+            <a href="#" class="button ">Sign Up! </a>
+          </div>
+        </div>
+      </div></p>     
+    </div>
+</div>
+    <script src="javascripts/vendor/fastclick.js"></script>
+    <script src="javascripts/vendor/zepto.js"></script>
+    <script src="javascripts/foundation.min.js"></script>
+    <script src="javascripts/foundation/foundation.tab.js"></script>
+    <script>
+      $(document).foundation();
+      $(document).foundation('reflow');
+    </script>
+  </body>
+</html>

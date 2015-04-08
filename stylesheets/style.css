@@ -1,0 +1,50 @@
+#paws_logo {
+  margin-left: -20px;
+  height: 150px;
+}
+
+#upper_nav_items {
+  margin-top: 1%;
+}
+
+#upper_nav_items li {
+  border: 1px solid #1dbcc4;
+  padding: .5em;
+  border-radius: 5px;
+  background-color: #1dbcc4;
+}
+
+#upper_nav_items a {
+  color: #FFF;
+  font-weight: 400;
+}
+
+header {
+  width: 100%;
+  background-color: #c7d6d8;
+  max-width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c7d6d8;
+}
+
+#mid_body {
+  padding-top:3%;
+}
+
+@media (max-width: 1020px) {
+  #upper-nav_items {
+    margin-top: 0;
+  }
+  
+  #paws_logo {
+    margin: 1% auto -5% 5%;
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  #paws_logo {
+    display: none;
+  }
+}
