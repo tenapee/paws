@@ -1,3 +1,7 @@
+body {
+  font-family: "Armata";
+}
+
 #paws_logo {
   margin-left: -20px;
   height: 150px;
@@ -29,6 +33,20 @@ header {
 
 #mid_body {
   padding-top:3%;
+}
+
+#title {
+  font-family: "Armata";
+  float: right;
+  margin-bottom: -3%;
+  margin-top: 4%;
+  color: #4D4D4D;
+}
+
+#welcome {
+  font-family: "Gochi Hand";
+  font-size: 3em;
+  color: #2a484d;
 }
 
 @media (max-width: 1020px) {
