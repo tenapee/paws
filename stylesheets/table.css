@@ -1,0 +1,59 @@
+table {
+    width: 900px !important;
+
+    margin: auto;
+
+
+}
+td {
+    text-overflow: ellipsis !important;
+}
+
+#welcome {
+    text-align: center;
+}
+
+table img {
+    width: 200px;
+    height: 150px;
+}
+
+.search {
+  margin-top: 50px;
+}
+
+h2{
+  text-align: center;
+}
+
+form.custom .custom.dropdown{
+  height: 45px;
+    padding-top: 5px;
+
+}
+
+label{
+  margin-bottom: 10px;
+}
+
+
+
+form.custom .custom.dropdown .selector{
+  top: 5px;
+}
+
+#search {
+    height: 45px;
+    margin: 15% 30% auto -110%;
+}
+
+#toggleDes {
+    margin-top: -37%;
+    height: 45px;
+    width: 100%;
+    padding-top: .2em;
+}
+#filters {
+    margin-left: 10%;
+}
+
