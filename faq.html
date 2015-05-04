@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FAQs</title>
+    <title>PAWS -- FAQs</title>
     <meta charset="utf-8">
     <meta name="description" content="This is a mock pet-adoption site!">
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="stylesheets/foundation/foundation.css">
     <script src="javascripts/vendor/jquery.js"></script>
     <script src="javascripts/vendor/modernizr.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Armata|Gochi+Hand|Oxygen|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/faq.css">
+    <link href='https://fonts.googleapis.com/css?family=Armata|Gochi+Hand|Oxygen|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
@@ -23,7 +24,7 @@
                 <li><a href="adoptable.php">Adoptable Pets</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="sign_in.html">Members</a></li>
+                <li><a href="sign_in.php">Members</a></li>
                 <li><a href="php/logout.php">Logout</a></li>
             </ul>
         </div>
@@ -32,8 +33,26 @@
 </header>
 <div class="row" id="mid_body">
     <div class="large-9 push-3 columns">
-        <h1 id="welcome">FAQ</h1>
-        <p>This our FAQ Page!</p>
+        <h1 id="welcome">FAQs</h1>
+        <div id="faq">
+            <ul id="general">
+                <li class="q">Can I adopt a pet from PAWS?</li>
+                <li class="a">While we are not involved in the actual adoption process, each pet's description includes the contact information for their adoption location. We serve merely as a resource to connect pet lovers with adoptable animals all over the country.</li>
+                <li class="q">How old do I have to be to adopt?</li>
+                <li class="a">Every adoption agency/shelter has different policies, but 21 is the typical age.</li>
+                <li class="q">How do I apply to adopt a pet?</li>
+                <li class="a">You can find all adoption information in the description of each adoptable pet. Most agencies/shelters require an application of some sort.</li>
+                <li class="q">What is the difference between a shelter and rescue group?</li>
+                <li class="a">The biggest difference is that most shelters keep their available pets in a single facility, while most rescue groups keep theirs in the homes of volunteers.</li>
+                <li class="q">What should I look for when I go see the pet?</li>
+                <li class="a">Just trust your intuition. If it seems right, chances are, it is. If something seems off, it probably is.</li>
+                <li class="q">Are the pets I see still available for adoption?</li>
+                <li class="a">We work very hardly to keep our data up-to-date. We use multiple resources to update our database every morning. If an animal is showing as available, it is.  </li>
+                <li class="q">How should I prepare for my new pet?</li>
+                <li class="a">You should try your hardest to make it comfortable for your new pet. This is going to be a very different experience for both of you, so the more comfortable the better. Feel free to check out our <a href="resources.html">resources</a> for more information.</li>
+            </ul>
+
+        </div>
     </div>
 
     <div class="large-3 pull-9 columns">
@@ -41,11 +60,12 @@
             <li><a href="adoptable.php">Adoptable Pets</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="sign_in.html">Members</a></li>
+            <li><a href="sign_in.php">Members</a></li>
         </ul>
-        <p><a href="#"><img src="images/pickme.jpeg"/></a></p>
+        <p><a href="adoptable.php"><img src="images/pickme.jpeg"/></a></p>
     </div>
 </div>
+
 
 <footer class="row">
     <div class="large-12 columns">
@@ -59,7 +79,7 @@
                     <li><a href="adoptable.php">Adoptable Pets</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="sign_in.html">Members</a></li>
+                    <li><a href="sign_in.php">Members</a></li>
                 </ul>
             </div>
         </div>
@@ -72,5 +92,6 @@
     $(document).foundation();
     $(document).foundation('reflow');
 </script>
+<script src="javascripts/faq.js"></script>
 </body>
 </html>

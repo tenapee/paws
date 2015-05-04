@@ -132,3 +132,4 @@ function submitQuery($json) {
   $json['success'] = true;
   print(json_encode($json, 128) . "\n");
 }
+?>

@@ -28,7 +28,7 @@ if (isset($_POST['username']) &&
           $_SESSION['firstname'] = $row[0];
           $_SESSION['lastname'] = $row[1];
           echo "$row[0] $row[1]: Hi $row[0], you are logged in as " . $_SESSION['username'];
-          die( header("Location: http://ec2-54-172-219-112.compute-1.amazonaws.com/project"));
+          die( header("Location: https://ec2-54-172-219-112.compute-1.amazonaws.com/project/success.php"));
           //die("<p><a href=../index.html>Click here to continue</a></p>");
         }
     else die("Invalid username/password combination");

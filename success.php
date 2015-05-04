@@ -1,7 +1,17 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: http://ec2-54-172-219-112.compute-1.amazonaws.com/project/sign_in.html");
+} else if (!isset($_SERVER['HTTPS'])) {
+  header("Location: https://ec2-54-172-219-112.compute-1.amazonaws.com/project/success.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PAWS</title>
+    <title>PAWS -- Members</title>
     <meta charset="utf-8">
     <meta name="description" content="This is a mock pet-adoption site!">
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -30,15 +40,12 @@
       <h3 id="title">Pet Adoption & Wellness Services</h3>
     </div>
     </header>
-    <div class="row" id="mid_body"> 
+    <div class="row" id="mid_body">
       <div class="large-9 push-3 columns">
         <h1 id="welcome">Welcome to PAWS!</h1>
-        <p>PAWS is a non-profit organization dedicated to bettering the lives of animals all over the country. We gather the latest resources to provide up-to-date information on dogs and cats available for adoption.
-        We work with shelters and fosters nation-wide in order to ensure that no animal goes unnoticed. It is our mission to find a loving furever home for every animal.</p>
-        <p>We have provided many resources for any animal lover to view, but in order to view adoptable pets you must be a <a href="sign_in.html">registered member.</a></p>
-        <p>Feel free to check out our <a href="faq.html">FAQs</a> for any more information.</p>
+        <p>Thanks for signing in, <?php echo $_SESSION['firstname'] ?>! Please check out all of our <a href="adoptable.php">available</a> pets!</p>
       </div>
-      
+
       <div class="large-3 pull-9 columns">
         <ul class="side-nav">
           <li><a href="adoptable.php">Adoptable Pets</a></li>
@@ -49,7 +56,7 @@
         <p><a href="adoptable.php"><img src="images/pickme.jpeg"/></a></p>
       </div>
     </div>
-    
+
     <footer class="row">
       <div class="large-12 columns">
         <hr />

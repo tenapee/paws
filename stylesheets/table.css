@@ -57,3 +57,6 @@ form.custom .custom.dropdown .selector{
     margin-left: 10%;
 }
 
+#noResults {
+    text-align: center;
+}

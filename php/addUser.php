@@ -30,7 +30,7 @@ function add_user($connection, $fn, $sn, $un, $pw){
    die($connection->error);
    } else {
     //echo "Sign-up Successful!";
-    header("Location: http://ec2-54-172-219-112.compute-1.amazonaws.com/project/sign_in.html");
+    header("Location: http://ec2-54-172-219-112.compute-1.amazonaws.com/project/sign_in.php");
    }
 }
 

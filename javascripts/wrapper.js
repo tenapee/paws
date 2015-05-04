@@ -8,7 +8,7 @@ $.ajaxSetup ({
     //Disables caching of AJAX Responses
     cache: false
 });
-
+var number = 101;
 var makeTable = function(grid) {
     var table = $('<table id="table">');
     var topRow = ("<tr><th>AnimalID</th><th>Status</th><th>Name</th><th>Species</th><th>Breed</th><th>Sex</th><th>Size</th><th>Description</th><th>Picture</th></tr>");
@@ -30,6 +30,7 @@ var makeTable = function(grid) {
         $.each(value, makeCell);
 
         $(table).append(row);
+
     };
 
     //table body
@@ -37,6 +38,13 @@ var makeTable = function(grid) {
 
     return table;
 };
+
+var displayAlert = function(label, details) {
+    var html = "<h3>" + label + ":</h3><pre>" +
+        JSON.stringify(details, null, 2) +
+        "</pre>Please re-submit the form:<hr>";
+    $("#output").html(html);
+}
 
 var displayError = function(jqXHR, textStatus, errorThrown) {
     alert(textStatus + "\n" + errorThrown);
@@ -61,10 +69,12 @@ var displaySelectResult = function(data) {
     if (typeof json.success !== 'undefined') {
         if (result.length > 0) {
             $("#output").append(makeTable(result));
-            $("td:nth-child(8),th:nth-child(8)").toggleClass("description");
+        } else {
+            $("#output").append('<p id="noResults">Your search returned 0 results</p>');
         }
     }
 };
+
 
 /* Submit form, invoke handler for result */
 /*  @param event the submit event object */
@@ -103,12 +113,23 @@ var redirectSelectForm = function (data) {
     populateSelectForm();
 };
 
-$(document).ready(function() {
 
+$(document).ready(function() {
     $("#search").click(redirectSelectForm);
 
+
     $("#toggleDes").on("click", function() {
+        $("td:nth-child(8),th:nth-child(8)").toggleClass("description");
         $(".description").toggle();
     });
+    $("#output").arrive("table", function() {
+        var n = $("table").length;
+        if (n > 1) {
+            for (i=1; i<n; i++) {
 
+                $("table")[i].style.display="none";
+            }
+        }
+    });
 });
+

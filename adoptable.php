@@ -2,12 +2,15 @@
 session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: http://ec2-54-172-219-112.compute-1.amazonaws.com/project/sign_in.html");
+} else if (!isset($_SERVER['HTTPS'])) {
+  header("Location: https://ec2-54-172-219-112.compute-1.amazonaws.com/project/adoptable.php");
 }
+
 ?>
 
 <html>
   <head>
-    <title>PAWS</title>
+    <title>PAWS -- Adoptable Pets</title>
     <meta charset="utf-8">
     <meta name="description" content="This is a mock pet-adoption site!">
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -17,7 +20,7 @@ if (!isset($_SESSION['username'])) {
     <script src="javascripts/vendor/jquery.js"></script>
     <script src="javascripts/vendor/modernizr.js"></script>
     <script src="javascripts/wrapper.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Armata|Gochi+Hand|Oxygen|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Armata|Gochi+Hand|Oxygen|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
@@ -31,7 +34,7 @@ if (!isset($_SESSION['username'])) {
           <li><a href="adoptable.php">Adoptable Pets</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="sign_in.html">Members</a></li>
+          <li><a href="sign_in.php">Members</a></li>
           <li><a href="php/logout.php">Logout</a></li>
         </ul>
       </div>
@@ -96,6 +99,7 @@ if (!isset($_SESSION['username'])) {
               <div class="large-2 small-12 columns expand">
                 <button class="button expand" id="search">Search</button>
                 <button class="button expand hide" id="toggleDes" >Toggle Description</button>
+
               </div>
             </div>
           </form>
@@ -105,6 +109,7 @@ if (!isset($_SESSION['username'])) {
 
 <div id="output">
 </div>
+<div id="more"></div>
 <footer class="row">
       <div class="large-12 columns">
         <hr />
@@ -117,7 +122,7 @@ if (!isset($_SESSION['username'])) {
               <li><a href="adoptable.php">Adoptable Pets</a></li>
               <li><a href="resources.html">Resources</a></li>
               <li><a href="faq.html">FAQ</a></li>
-              <li><a href="sign_in.html">Members</a></li>
+              <li><a href="sign_in.php">Members</a></li>
             </ul>
           </div>
         </div>
@@ -126,6 +131,7 @@ if (!isset($_SESSION['username'])) {
     <script src="javascripts/vendor/zepto.js"></script>
     <script src="javascripts/vendor/fastclick.js"></script>
     <script src="javascripts/foundation.min.js"></script>
+    <script src="javascripts/vendor/arrive.min.js"></script>
     <script>
       $(document).foundation();
       $(document).foundation('reflow');

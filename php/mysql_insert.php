@@ -1,7 +1,7 @@
 <?php
 require_once 'connect.php';
 //read file contents
-$json_data = file_get_contents('../data/FLWAI8IN_updatedpets_1.json');
+$json_data = file_get_contents('../data/FLWAI8IN_newpets_1.json');
 
 $resultArray = explode(PHP_EOL, $json_data);
 //var_dump($json_data);
